@@ -4,6 +4,7 @@ import { ListeArticlesComponent } from './liste-articles/liste-articles.componen
 import { DetailsArticlesComponent } from './details-articles/details-articles.component';
 import { MyDirectiveDirective } from './my-directive.directive';
 import { RouterModule, Routes } from '@angular/router';
+import { ArticlesService } from './articles.service';
 
 const routesVetments: Routes = [
   { path: 'articles', component: ListeArticlesComponent},
@@ -19,6 +20,9 @@ const routesVetments: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routesVetments)
+  ],
+  providers: [
+    ArticlesService
   ]
 })
 export class GestionArticlesModule { }
